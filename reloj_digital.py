@@ -1,4 +1,5 @@
 import os
+import shutil
 from myhdl import *
 
 from ajuste_tiempo import Ajuste_tiempo
@@ -42,4 +43,4 @@ if __name__ == '__main__':
 
     for f in os.listdir('.'):
         if os.path.isfile(f) and f.endswith(".vhd"):
-            os.rename(f, "vhdl/"+f)
+            shutil.move(f, "vhdl/"+f)
